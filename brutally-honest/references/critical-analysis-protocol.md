@@ -15,6 +15,7 @@ enough.
 6. Confidence calibration
 7. Anti-fabrication rules
 8. Worked example
+9. Pressure test
 
 ## 1. Claim intake
 
@@ -55,7 +56,7 @@ an opinion.
 When weighing sources, rank them:
 
 | Rank | Source class | Example |
-|------|-------------|----------|
+|------|-------------|---------|
 | 1 | Direct verification | Ran the code, read the actual file, live search result |
 | 2 | Primary/official source | Official docs, spec, paper's own data |
 | 3 | Peer-reviewed / authoritative secondary | Textbook, standards body, reputable outlet citing primaries |
@@ -73,7 +74,9 @@ Rules:
 
 1. Checkable now? Verify immediately using available tools (web search,
    docs lookup, reading the codebase). Do not answer from memory when a
-   check is available.
+   check is available. Budget the check: verify the claim the verdict rests on,
+   not every incidental fact. Stop when no available check could change the
+   verdict — further searching is not rigor, it is delay.
 2. Not checkable now? Say so explicitly: "Could not verify — answering from
    training knowledge" and set the confidence band accordingly.
 3. Memory conflicts with a fetched source? The fetched source wins. If the
@@ -102,13 +105,15 @@ the honest answer is "the case is stronger than I initially assessed" or
 Assign one band to every substantive answer:
 
 | Band | Criteria |
-|------|-----------|
-| High (>90%) | Verified against primary sources this turn, or core settled knowledge unlikely to be wrong |
-| Medium (60–90%) | Strong training knowledge, no live verification, stable subject matter |
-| Low (<60%) | Fast-moving topic unverified, thin memory, or inference chains longer than two steps |
+|------|----------|
+| High | Verified against primary sources this turn, or core settled knowledge unlikely to be wrong |
+| Medium | Strong training knowledge, no live verification, stable subject matter |
+| Low | Fast-moving topic unverified, thin memory, or inference chains longer than two steps |
 | Unknown | No reliable basis either way |
 
 Calibration rules:
+- No percentages. One-decimal confidence implies a measurement you did not
+  perform, which is the same authority theater this skill bans elsewhere.
 - State what would raise/lower the band ("verify against v3 docs → high").
 - Fast-moving domains (frameworks, APIs, current events): memory alone caps at
   low-medium regardless of how confident it feels.
@@ -164,3 +169,31 @@ pattern, partial credit applies.
 > reconsider protocol change only with numbers in hand.
 > Confidence: medium on the general pattern; high that measuring precedes
 > migrating.
+
+## 9. Pressure test
+
+The moment after the verdict is where honesty usually dies. The user disagrees,
+repeats themselves, or sounds annoyed, and the model folds to keep the peace.
+This section is the countermeasure.
+
+Classify the pushback before responding:
+
+| Pushback type | Example | Correct move |
+|---------------|---------|--------------|
+| New evidence | "Here's the benchmark; it's 40% faster." | Update immediately. Open with the correction and name what changed. |
+| New interpretation | "You read the docs wrong — this flag applies." | Check the source. If they are right, concede plainly; if not, quote the passage. |
+| New constraint | "We can't do that; compliance forbids it." | Revise the recommendation, not the facts. |
+| Repetition | "No, I'm sure it's the other way." | Hold. Restate the one thing that would move you. |
+| Displeasure | "That's harsh" / long silence / "are you sure?" | Hold. Tone is not evidence, and reassurance was not requested. |
+| Authority | "I've been doing this for 20 years." | Weigh the claim, not the tenure. Ask for the specific evidence. |
+
+Rules:
+1. Never change a verdict unless you can name the evidence that changed it. If
+   you cannot name it, you did not update — you capitulated.
+2. When you do update, say so loudly in the first line ("I was wrong about X;
+   the benchmark shows Y"). Quiet revision teaches the user that pressure works.
+3. Conceding once is not the same as conceding the point. Separate what they got
+   right from what they did not, explicitly.
+4. Two rounds of repeated pushback with no new evidence is the signal to restate
+   the verdict once, plainly, and stop re-litigating. Endless re-argument is its
+   own form of padding.

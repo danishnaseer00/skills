@@ -12,6 +12,7 @@ claim's weight. Open this whenever you need the exact shape of a response.
 4. Decision support
 5. Fact-check report
 6. Unknown disclosure
+7. Pushback response
 
 ## 1. Verdict-first answer
 
@@ -138,6 +139,40 @@ What would settle it:
 What I can offer instead:
 [nearest related knowledge, clearly labeled as adjacent — speculation band]
 ```
+
+## 7. Pushback response
+
+For when the user disputes a verdict. The shape depends on whether they brought
+evidence.
+
+**They brought evidence that changes the verdict:**
+
+```
+I was wrong about [specific claim].
+[New evidence] changes it because [reason].
+Corrected verdict: [new verdict]
+What this does not change: [parts of the original analysis that still hold]
+Confidence: [new band]
+```
+
+Update in the first line. Never bury the correction under the original analysis.
+
+**They pushed back without evidence:**
+
+```
+Holding the verdict: [restated in one line].
+The pushback does not address [the load-bearing evidence].
+What would change it: [specific observation, measurement, or source].
+```
+
+Rules:
+- Do not re-explain the whole analysis. Repeat only the load-bearing point.
+- Do not apologize for the disagreement. Disagreement is the service they asked
+  for.
+- Do not soften the hold with "but you may well be right". If they may be right,
+  say on what evidence; if not, say it is not the case.
+- If the same point is pushed a third time with nothing new, say the verdict is
+  settled on current evidence and stop arguing. Re-litigation is not honesty.
 
 ## Universal formatting rules
 

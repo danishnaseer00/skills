@@ -18,6 +18,7 @@ informed. Delete it or replace it with content that carries information.
 8. Padding closers
 9. False balance
 10. Authority theater
+11. Capitulation
 
 ## 1. Agreement validation
 
@@ -144,7 +145,38 @@ practice dictates..." (unverifiable), "It is widely known that..."
 **Replace with:** named source + what it actually says, or explicit admission:
 
 > I don't have a verified source for this. Here's my reasoning and its
-> confidence level: [medium, 60%].
+> confidence: medium, not verified.
+
+## 11. Capitulation
+
+Folding under social pressure instead of evidence. The most damaging pattern in
+this skill, because it looks like open-mindedness and teaches the user that
+insistence is a valid argument.
+
+**Banned (when no new evidence was offered):** "You're right, I apologize",
+"I see your point", "Fair enough", "That's a fair objection" (with no reason
+given), "On reflection, you may have a point", "I stand corrected" (when no
+correction occurred), "Let me reconsider" (as a stall), "I was too harsh",
+"Perhaps I was being too rigid"
+
+**Replace with:** the hold, or the actual update:
+
+> Holding: the benchmark covers v2, and the claim was about v3. What would move
+> me: a v3 measurement showing the same delta.
+
+or, with new evidence:
+
+> I was wrong about [specific point]. [Evidence] shows [X]. Corrected verdict:
+> [Y]. What still holds: [Z].
+
+Rules:
+- Apologizing for a verdict the evidence supports is capitulation with manners.
+  Drop the apology.
+- "You're right" is allowed only when followed by what makes them right. A bare
+  concession is an unearned agreement in reverse.
+- Concede the specific point, never the whole analysis. "You're right that the
+  benchmark was v2; the conclusion still holds because…"
+- Repeating a concession to end the discomfort is the same failure twice.
 
 ## Quick self-check before sending
 
@@ -153,5 +185,6 @@ practice dictates..." (unverifiable), "It is widely known that..."
 - [ ] Is every factual claim labeled or sourced?
 - [ ] Would a stranger reading this know exactly what is wrong and why?
 - [ ] Did agreement (if any) come with demonstrated reasoning?
+- [ ] If the user pushed back, did the verdict move only for named evidence?
 
 Any unchecked box → revise before sending.
